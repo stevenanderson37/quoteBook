@@ -1,0 +1,19 @@
+body {
+
+}
+
+.container {
+  background-color: rgb(246, 255, 251);
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.deleteButton {
+  margin-left: 95%;
+}
+
+p {
+  font-family: 'Minion Cyrillic Semibold', arial;
+  font-size: 30px;
+  color: rgb(58, 58, 58);
+}

@@ -1,15 +1,45 @@
-body {
+@import 'https://fonts.googleapis.com/css?family=Nunito';
 
+body {
+  background-color: rgb(246, 255, 251);
 }
 
 .container {
   background-color: rgb(246, 255, 251);
   margin-left: 5%;
   margin-right: 5%;
+  box-shadow: 0px -1px 1px 1px rgb(185, 185, 185);
+  /*outline: 2px solid rgb(185, 185, 185);*/
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.container p {
+  padding-left: 20px;
+  box-shadow: 0px 8px 3px 1px rgb(185, 185, 185);
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  padding-bottom: 25px;
 }
 
 .deleteButton {
   margin-left: 95%;
+}
+
+.deleteButton-circle {
+  width: 40px;
+  height: 30px;
+  text-align: center;
+  float: right;
+  margin-right: 5%;
+  border-radius: 75%;
+  background-color: black;
+  color: rgb(246, 255, 251);
+  font-family: 'Nunito', sans-serif;
+}
+
+.deleteButton-circle:hover {
+  box-shadow: 0px 0px 3px 1px rgb(200, 50, 50);
 }
 
 p {

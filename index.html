@@ -5,6 +5,7 @@
     <title>mini-userProfiles</title>
     <link rel="stylesheet" href="styles.css"></link>
     <link href="http://allfont.net/allfont.css?fonts=minion-cyrillic-semibold" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Proza+Libre:600" rel="stylesheet" />
 
 </head>
 <body ng-controller="mainController">
@@ -21,11 +22,11 @@
 
       <section class="container">
         <p ng-repeat="quote in quotes  | filter: filterText">
-          <span class="text">"{{quote.text}}"</span>
+          <q class="text">{{quote.text}}</q>
           <br>
           <span class = 'author' style="color: rgb(113, 113, 113)">– {{quote.author}}</span>
           <!-- <button class="deleteButton" ng-click="removeData">X</button> -->
-          <span class="deleteButton-circle" ng-click="removeData" style="padding-bottom: 10px;">x</span>
+          <span class="deleteButton-circle" ng-click="removeData" style="padding-bottom: 20px;">x</span>
         </p>
       </section>
 

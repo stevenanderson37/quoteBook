@@ -6,7 +6,7 @@ angular.module('quoteBook')
       author: 'Kevin Kruse'
     },
     {
-      text: 'Whatever the mind of man can conceive and believe, it can achieve',
+      text: 'Whatever the mind of man can conceive and believe, it can achieve.',
       author: 'Napoleon Hill'
     },
     {

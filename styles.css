@@ -27,8 +27,8 @@ body {
 }
 
 .deleteButton-circle {
-  width: 40px;
-  height: 30px;
+  width: 43px;
+  height: 25px;
   text-align: center;
   float: right;
   margin-right: 5%;
@@ -46,4 +46,5 @@ p {
   font-family: 'Minion Cyrillic Semibold', arial;
   font-size: 30px;
   color: rgb(58, 58, 58);
+  quotes: "“" "”";
 }

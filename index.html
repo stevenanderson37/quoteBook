@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html ng-app="quoteBook">
 <head>
-    <meta charset="utf-8">
-    <title>mini-userProfiles</title>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <title>My Quote Book</title>
+    <link rel="stylesheet" href="reset.css"></link>
     <link rel="stylesheet" href="styles.css"></link>
-    <link href="http://allfont.net/allfont.css?fonts=minion-cyrillic-semibold" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Proza+Libre:600" rel="stylesheet" />
 
 </head>
 <body ng-controller="mainController">
-    <!-- {{thisAppIsBroken}} -->
 
-    <div>
-      <input type="text" placeholder="New Quote" ng-model="newQuoteText"></input>
-      <input type="text" placeholder="Author" ng-model="newQuoteAuthor"></input>
-      <button ng-click="addData">Add Quote</button>
-      <div>
-        Filter: <input type="text" placeholder="Filter Quotes"></input>
-      </div>
+    <!-- <div class="title">
+      <h1>My Quote Book</h1>
+    </div> -->
+
+    <div class="filter-container">
+      Filter: <input type="text" placeholder="Filter Quotes" ng-model="filterText"></input>
     </div>
 
-      <section class="container">
-        <p ng-repeat="quote in quotes  | filter: filterText">
-          <q class="text">{{quote.text}}</q>
-          <br>
-          <span class = 'author' style="color: rgb(113, 113, 113)">– {{quote.author}}</span>
-          <!-- <button class="deleteButton" ng-click="removeData">X</button> -->
-          <span class="deleteButton-circle" ng-click="removeData" style="padding-bottom: 20px;">x</span>
-        </p>
-      </section>
+    <section class="container">
+      <div>
+        <q><input id="newQuoteInput" type="text" placeholder="Add new quote here!" ng-model="newQuoteText" class="add-quote"></input></q>
+        <!-- Below is a way to make the new quote expand out the quotes with how long the new quote is. I need to find a way to combine the two (i.e., to add a placeholder text to the below example). -->
+        <!-- <q><span class="add-quote" contenteditable="true">Add new quote here!</span></q> -->
+        <br>
+        <span class="add-author">– <input id="newAuthorInput" type="text" placeholder="Add author here!" ng-model="newQuoteAuthor"></input></span>
+        <span class="addButton-circle" ng-click="addQuote()"></span>
+      </div>
+
+      <div ng-repeat="quote in quotes | filter: filterText">
+        <q class="text">{{quote.text}}</q>
+        <br>
+        <p class="author">– {{quote.author}}</p>
+        <!-- <button class="deleteButton" ng-click="removeData">X</button> -->
+        <span class="deleteButton-circle" ng-click="deleteMe(quote.text)"></span>
+      </div>
+    </section>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
-    <script src="app.js"></script>
-    <script src="controller.js"></script>
-    <script src="mainService.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/mainCtrl.js"></script>
+    <script src="./js/mainService.js"></script>
 </body>
 </html>

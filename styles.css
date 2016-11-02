@@ -1,50 +1,172 @@
-@import 'https://fonts.googleapis.com/css?family=Nunito';
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:500');
+@import url('http://allfont.net/allfont.css?fonts=minion-cyrillic-semibold');
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes');
 
 body {
   background-color: rgb(246, 255, 251);
 }
 
+.title {
+  width: 95%;
+  height: auto;
+  margin: auto;
+  margin-top: 60px;
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: 75px;
+}
+
+.filter-container {
+  width: 95%;
+  height: auto;
+  margin: auto;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  text-align: right;
+}
+
 .container {
+  width: 95%;
+  height: auto;
+  margin: auto;
+  margin-bottom: 40px;
   background-color: rgb(246, 255, 251);
-  margin-left: 5%;
-  margin-right: 5%;
   box-shadow: 0px -1px 1px 1px rgb(185, 185, 185);
-  /*outline: 2px solid rgb(185, 185, 185);*/
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
 }
 
-.container p {
-  padding-left: 20px;
+.container div {
+  padding: 25px 20px 25px 20px;
   box-shadow: 0px 8px 3px 1px rgb(185, 185, 185);
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
-  padding-bottom: 25px;
 }
 
-.deleteButton {
-  margin-left: 95%;
+.addButton-circle {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  float: right;
+  border-radius: 75%;
+  background-color: rgba(255, 255, 255, 0);
+  background-image: url(./img/add-button.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 95%;
+  margin-top: 5px;
+}
+
+.addButton-circle:hover {
+  box-shadow: 0px 0px 3px 2px rgb(120,190,245);
+  cursor: pointer;
+}
+
+.add-quote {
+  border-style: none;
+  background-color: transparent;
+  width: 255px;
+  height: auto;
+  font-family: 'Minion Cyrillic Semibold', arial;
+  font-size: 30px;
+  color: #3a3a3a;
+  text-align: left;
+}
+
+.add-quote::-webkit-input-placeholder {
+   color: #3a3a3a;
+}
+
+.add-quote:-moz-placeholder { /* Firefox 18- */
+   color: #3a3a3a;
+}
+
+.add-quote::-moz-placeholder {  /* Firefox 19+ */
+   color: #3a3a3a;
+}
+
+.add-quote:-ms-input-placeholder {
+   color: #3a3a3a;
+}
+
+.add-author {
+  padding-top: 10px;
+  font-family: 'Minion Cyrillic Semibold', arial;
+  font-size: 30px;
+  color: #717171;
+}
+
+.add-author input {
+  width: 225px;
+  font-family: 'Minion Cyrillic Semibold', arial;
+  font-size: 30px;
+  border-style: none;
+  background-color: transparent;
+}
+
+.add-author input::-webkit-input-placeholder {
+   color: #717171;
+}
+
+.add-author input:-moz-placeholder { /* Firefox 18- */
+   color: #717171;
+}
+
+.add-author input::-moz-placeholder {  /* Firefox 19+ */
+   color: #717171;
+}
+
+.add-author input:-ms-input-placeholder {
+   color: #717171;
 }
 
 .deleteButton-circle {
-  width: 43px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
+  margin-top: -33px;
   text-align: center;
   float: right;
-  margin-right: 5%;
   border-radius: 75%;
-  background-color: black;
-  color: rgb(246, 255, 251);
-  font-family: 'Nunito', sans-serif;
+  background-color: rgba(255, 255, 255, 0);
+  background-image: url(./img/delete-button-png-28567.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .deleteButton-circle:hover {
-  box-shadow: 0px 0px 3px 1px rgb(200, 50, 50);
+  box-shadow: 0px 0px 3px 1px rgb(185, 50, 50);
+  cursor: pointer;
 }
 
-p {
+.container .text {
+  width: 100%;
+  height: auto;
+  margin-right: 10%;
   font-family: 'Minion Cyrillic Semibold', arial;
   font-size: 30px;
   color: rgb(58, 58, 58);
-  quotes: "“" "”";
+}
+
+.container .author {
+  padding-top: 10px;
+  font-family: 'Minion Cyrillic Semibold', arial;
+  font-size: 30px;
+  color: rgb(113, 113, 113);
+}
+
+q {
+  quotes: "“" "”" "‘" "’";
+  line-height: 0.85;
+}
+q:before {
+  content: open-quote;
+  font-size: 50px;
+  font-family: 'Slabo 27px', 'Alegreya Sans', serif;
+}
+q:after {
+  content: close-quote;
+  font-size: 50px;
+  font-family: 'Slabo 27px', 'Alegreya Sans', serif;
 }

@@ -46,7 +46,7 @@ angular.module('quoteBook')
   this.removeData = function(textToRemove) {
     for (var i = 0; i < quotes.length; i++) {
       if (quotes[i].text.toLowerCase() === textToRemove.toLowerCase()) {
-        quotes.splice(i, 1)
+        quotes.splice(i--, 1)
       }
     }
   };

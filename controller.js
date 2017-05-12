@@ -19,7 +19,7 @@ angular.module('quoteBook')
   };
 
   (function(){
-    var min = 255, max = 95, pad_right = 5, input = document.getElementById('newQuoteInput');
+    var min = 280, max = 95, pad_right = 5, input = document.getElementById('newQuoteInput');
 
     input.style.width = min+'px';
     input.onkeypress = input.onkeydown = input.onkeyup = function(){
